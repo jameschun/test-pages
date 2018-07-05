@@ -1,0 +1,1207 @@
+<html lang="en-US" class="wf-walsheim-n2-active wf-walsheim-o2-active wf-walsheim-n7-active wf-pressuramono-n4-active wf-pressuramono-n7-active wf-walsheim-o4-active wf-pressura-i7-active wf-pressura-n4-active wf-walsheim-o7-active wf-walsheim-n4-active wf-sssocial-n4-inactive wf-active"><head>
+<meta charset="UTF-8"><script src="https://js-agent.newrelic.com/nr-1071.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MHZQXGF"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="shortcut icon" href="https://thepointsguy.com/wp-content/themes/tpg-2016/favicon.ico?v=3">
+<meta name="google-site-verification" content="Ljof3Duwtracp116XX76hDeY-IZn3TnvmYX8PMQIFIw">
+
+<title>Thinking of Being an Airbnb Host? Here's How to Do it Right</title>
+<link rel="dns-prefetch" href="//thepointsguy.com">
+<link rel="dns-prefetch" href="//cdn.optimizely.com">
+<link rel="dns-prefetch" href="//s.skimresources.com">
+<link rel="dns-prefetch" href="//assets.adobedtm.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="The Points Guy » Feed" href="https://thepointsguy.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="The Points Guy » Comments Feed" href="https://thepointsguy.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="The Points Guy » Thinking of Becoming an Airbnb Host? Here’s How to Do It Right Comments Feed" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/feed/">
+<meta name="description" content="One experienced host in Brooklyn, New York, shares what she learned after three years of renting out her second room on Airbnb — and how you can do it, too."><!-- WP SEO -->
+<meta name="keywords" content="airbnb,vacation rentals,airbnb hosting,travel tips,travel credit,how to be a great airbnb host,airbnb host tips,vacation ideas"><!-- WP SEO -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/thepointsguy.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.6"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="https://thepointsguy.com/wp-includes/js/wp-emoji-release.min.js?ver=4.9.6" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="tpg_2016-screen-css" href="https://thepointsguy.com/wp-content/themes/tpg-2016/static/css/global.79b4c4b1075ebfa13c8a.min.css?ver=1.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-parsely-style-css" href="https://thepointsguy.com/wp-content/mu-plugins/wp-parsely/wp-parsely.css?ver=1530817180" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="https://thepointsguy.com/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="https://thepointsguy.com/wp-content/plugins/jetpack/css/jetpack.css?ver=4.4.2" type="text/css" media="all">
+<script type="text/javascript" src="https://thepointsguy.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"https:\/\/thepointsguy.com\/wp-admin\/admin-ajax.php","base_url":"https:\/\/thepointsguy.com","endpoint_url":"https:\/\/thepointsguy.com\/endpoint","guid":"https:\/\/thepointsguy.com\/?p=347113","post_id":"347113","eventName":"visit","cardID":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/themes/tpg-2016/static/js/common.450f758.bundle.min.js?ver=1.1.1"></script>
+<link rel="stylesheet" href="/wp-content/themes/tpg-2016/static/css/fonts.css" media="all"><script type="text/javascript" src="https://thepointsguy.com/wp-content/themes/tpg-2016/static/js/webfontLoader.450f758.bundle.min.js?ver=1.1.1"></script>
+<script type="text/javascript" src="https://cdn.optimizely.com/js/8604721080.js?ver=4.9.6"></script>
+<script type="text/javascript" src="https://assets.adobedtm.com/35c935cd798f6a0634b954c60f0f14c3bb4b481c/satelliteLib-7f82f7455f569d0b577e1e3bab4203c604ae47f7.js"></script>
+<link rel="https://api.w.org/" href="https://thepointsguy.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://thepointsguy.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://thepointsguy.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Deal Alert: US Cities to China From $472 Round-Trip" href="https://thepointsguy.com/2017/07/deal-alert-us-china-472/">
+<link rel="next" title="When Do Purchased Points Count Toward Lifetime Status?" href="https://thepointsguy.com/2017/07/purchased-points-lifetime-status/">
+<meta name="generator" content="WordPress 4.9.6">
+<link rel="canonical" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/">
+<link rel="shortlink" href="https://thepointsguy.com/?p=347113">
+<link rel="alternate" type="application/json+oembed" href="https://thepointsguy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://thepointsguy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F&amp;format=xml">
+<!-- BEGIN wp-parsely Plugin Version 1.12.1 -->
+<meta name="wp-parsely_version" id="wp-parsely_version" content="1.12.1">
+	<script type="application/ld+json">
+	{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/thepointsguy.com\/2017\/07\/how-to-be-a-great-airbnb-host\/"},"headline":"Thinking of Becoming an Airbnb Host? Here&#8217;s How to Do It Right","url":"http:\/\/thepointsguy.com\/2017\/07\/how-to-be-a-great-airbnb-host\/","thumbnailUrl":"https:\/\/i0.wp.com\/thepointsguy.com\/wp-content\/uploads\/2017\/06\/airbnb2.jpg?fit=3572%2C2366px&ssl=1","image":{"@type":"ImageObject","url":"https:\/\/i0.wp.com\/thepointsguy.com\/wp-content\/uploads\/2017\/06\/airbnb2.jpg?fit=3572%2C2366px&ssl=1"},"dateCreated":"2017-07-02T23:00:15Z","datePublished":"2017-07-02T23:00:15Z","dateModified":"2017-07-02T23:00:15Z","articleSection":"News","author":[{"@type":"Person","name":"Jessie Festa"}],"creator":["Jessie Festa"],"keywords":["airbnb","brooklyn","new york","new york city","rental lodgings","travel tips","vacation ideas"],"publisher":{"@type":"Organization","name":"The Points Guy"}}
+	</script>
+
+	<!-- END wp-parsely Plugin Version 1.12.1 -->
+
+<link rel="dns-prefetch" href="//i0.wp.com">
+<link rel="dns-prefetch" href="//i1.wp.com">
+<link rel="dns-prefetch" href="//i2.wp.com">
+
+<meta property="og:description" content="One experienced host in Brooklyn, New York, shares what she learned after three years of renting out her second room on Airbnb — and how you can do it, too.">
+<meta property="og:image" content="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?fit=3572%2C2366px&amp;ssl=1">
+<meta property="og:site_name" content="The Points Guy">
+<meta property="og:title" content="Thinking of Being an Airbnb Host? Here's How to Do it Right">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@thepointsguy">
+
+	<script type="text/javascript">
+		window.tpgGlobalVars = {"permalink":"http:\/\/thepointsguy.com\/2017\/07\/how-to-be-a-great-airbnb-host\/","dsqIdentifierForPost":"http:\/\/thepointsguy.com\/2017\/07\/how-to-be-a-great-airbnb-host\/"};
+	</script>
+	
+<style type="text/css">
+	.preampjs [data-preamp],
+	.fusejs [data-fuse] {
+		opacity: 0 !important;
+	}
+</style>
+<script>
+	!function(co,h,e,s,i,o,n){var d='documentElement';var a='className';h[d][a]+=' preampjs fusejs';
+	n.k=e;co._Cohesion=n;co._Preamp={k:s,start:new Date};co._Fuse={k:i};co._Tagular={k:o};
+	[e,s,i,o].map(function(x){co[x]=co[x]||function(){(co[x].q=co[x].q||[]).push([].slice.call(arguments))}});
+	h.addEventListener('DOMContentLoaded',function(){co.setTimeout(function(){
+	var u=h[d][a];h[d][a]=u.replace(/ ?preampjs| ?fusejs/g,'')},3e3);
+	co._Preamp.docReady=co._Fuse.docReady=!0});var z=h.createElement('script');
+	z.async=1;z.src='https://cdn.cohesionapps.com/cohesion/cohesion-latest.min.js';h.head.appendChild(z);}
+	(window,document,'cohesion','preamp','fuse','tagular',{
+		tagular:{apiKey:'8830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34'},
+		preamp:{siteId:'1J0NDsEnrxse6tLymGTyGi'}
+	})
+</script><script async="" src="https://cdn.cohesionapps.com/cohesion/cohesion-latest.min.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MHZQXGF');</script>
+<!-- End Google Tag Manager -->
+<style>img[data-sizes="auto"] { display: block; width: 100%; }</style><link rel="amphtml" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/amp/"><script src="//thepointsguy.disqus.com/embed.js" data-timestamp="1530829836517"></script><script type="text/javascript" charset="utf-8" async="" src="/wp-content/themes/tpg-2016/static/js/1.450f758.chunk.min.js"></script><style type="text/css">.fusejs [data-fuse] { opacity: 0; }</style><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v2.SessionStarted%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v2.SessionStarted%22%2C%22sessionCount%22%3A2%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A36.796Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A36.796Z%22%2C%22messageId%22%3A%22d4c76464-9242-4eb1-b04c-6e3f99045ff2%22%7D&amp;callback=_Tagular.universalCB"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.3999ac261b914f8b8b5e85df0ff3eaea.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.5f8e47303ecf1055cd7c6905466d140a.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.33067ddbd4792de0b384ceb588602715.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script type="text/javascript" id="dsq-count-scr" src="//thepointsguy.disqus.com/count.js"></script><style type="text/css"></style><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v2.PageViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v2.PageViewed%22%2C%22pageName%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22newAnonymousId%22%3Afalse%2C%22performance%22%3A%7B%22navigationStart%22%3A1530829835962%2C%22unloadEventStart%22%3A0%2C%22unloadEventEnd%22%3A0%2C%22redirectStart%22%3A0%2C%22redirectEnd%22%3A0%2C%22fetchStart%22%3A1530829835971%2C%22domainLookupStart%22%3A1530829835971%2C%22domainLookupEnd%22%3A1530829835971%2C%22connectStart%22%3A1530829835971%2C%22connectEnd%22%3A1530829835971%2C%22secureConnectionStart%22%3A0%2C%22requestStart%22%3A1530829835973%2C%22responseStart%22%3A1530829836028%2C%22responseEnd%22%3A1530829836039%2C%22domLoading%22%3A1530829836040%2C%22domInteractive%22%3A1530829836566%2C%22domContentLoadedEventStart%22%3A1530829836567%2C%22domContentLoadedEventEnd%22%3A1530829836724%2C%22domComplete%22%3A0%2C%22loadEventStart%22%3A0%2C%22loadEventEnd%22%3A0%7D%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.248Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.248Z%22%2C%22messageId%22%3A%22dc8815f8-9fc6-4e33-82c2-b8877a83dc30%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%2222034405%22%2C%22name%22%3A%22The%20Business%20Platinum%C2%AE%20Card%20from%20American%20Express%20OPEN%20(22034405)%22%2C%22location%22%3A%22links%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22text%22%3A%22Fav%20Card%20Widget%22%2C%22position%22%3A1%2C%22sku%22%3A%22162523%22%2C%22brand%22%3A%22American%20Express%22%7D%2C%22correlationId%22%3A%22db7a33aa-fea6-461f-9c7b-1f189594081b%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.265Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.265Z%22%2C%22messageId%22%3A%228df2a7b7-9fc3-4263-80cc-9bfc1a246268%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%22221412045%22%2C%22name%22%3A%22Citi%C2%AE%20%2F%20%20AAdvantage%C2%AE%20Platinum%20Select%C2%AE%20World%20Elite%E2%84%A2%20Mastercard%C2%AE%20(221412045)%22%2C%22location%22%3A%22links%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22text%22%3A%22Fav%20Card%20Widget%22%2C%22position%22%3A2%2C%22sku%22%3A%22221412045%22%2C%22brand%22%3A%22Citi%22%7D%2C%22correlationId%22%3A%22ce8d6243-ca6c-4db8-aca8-3b8896c1d35a%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.266Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.266Z%22%2C%22messageId%22%3A%222ca8a5b8-755d-40cc-990a-322c2f819db7%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%2222125056%22%2C%22name%22%3A%22Chase%20Sapphire%20Preferred%C2%AE%20Card%20(22125056)%22%2C%22location%22%3A%22links%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22text%22%3A%22Fav%20Card%20Widget%22%2C%22position%22%3A3%2C%22sku%22%3A%22204650%22%2C%22brand%22%3A%22Chase%22%7D%2C%22correlationId%22%3A%22ec474670-444f-4a9c-8d08-d962b85b7b8d%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.268Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.268Z%22%2C%22messageId%22%3A%2224475ed1-42dc-49a1-9231-0381b6919d39%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%2222105772%22%2C%22name%22%3A%22Capital%20One%C2%AE%20Venture%C2%AE%20Rewards%20Credit%20Card%20(22105772)%22%2C%22location%22%3A%22links%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22text%22%3A%22Fav%20Card%20Widget%22%2C%22position%22%3A4%2C%22sku%22%3A%22ce293c61587c41c29a64c5685cb78e40%22%2C%22brand%22%3A%22Capital%20One%22%7D%2C%22correlationId%22%3A%22c7630a30-16f4-474d-886e-fd1276ab894e%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.268Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.268Z%22%2C%22messageId%22%3A%228a9b739a-43a4-4897-960b-e9f732c49b70%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v3.ContentMetadataTracked%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v3.ContentMetadataTracked%22%2C%22contentName%22%3A%22Thinking%20of%20Becoming%20an%20Airbnb%20Host%3F%20Here%E2%80%99s%20How%20to%20Do%20It%20Right%22%2C%22siteSection%22%3A%5B%22airbnb%22%2C%22brooklyn%22%2C%22New%20York%22%2C%22New%20York%20City%22%2C%22Rental%20Lodgings%22%2C%22travel%20tips%22%2C%22vacation%20ideas%22%5D%2C%22category%22%3A%22%22%2C%22publishDate%22%3A%222017-07-02%2023%3A00%3A15.000%22%2C%22author%22%3A%22Jessie%20Festa%22%2C%22tags%22%3A%5B%5D%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.273Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.273Z%22%2C%22messageId%22%3A%225c283406-08af-46dd-b9e2-273eac119b72%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://thepointsguy.disqus.com/count-data.js?2=http%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.browser.v1alpha2.DomCompleted%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.browser.v1alpha2.DomCompleted%22%2C%22performance%22%3A%7B%22navigationStart%22%3A1530829835962%2C%22unloadEventStart%22%3A0%2C%22unloadEventEnd%22%3A0%2C%22redirectStart%22%3A0%2C%22redirectEnd%22%3A0%2C%22fetchStart%22%3A1530829835971%2C%22domainLookupStart%22%3A1530829835971%2C%22domainLookupEnd%22%3A1530829835971%2C%22connectStart%22%3A1530829835971%2C%22connectEnd%22%3A1530829835971%2C%22secureConnectionStart%22%3A0%2C%22requestStart%22%3A1530829835973%2C%22responseStart%22%3A1530829836028%2C%22responseEnd%22%3A1530829836039%2C%22domLoading%22%3A1530829836040%2C%22domInteractive%22%3A1530829836566%2C%22domContentLoadedEventStart%22%3A1530829836567%2C%22domContentLoadedEventEnd%22%3A1530829836724%2C%22domComplete%22%3A1530829837956%2C%22loadEventStart%22%3A1530829837956%2C%22loadEventEnd%22%3A0%7D%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A37.958Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A37.958Z%22%2C%22messageId%22%3A%22aa0ff683-a03b-4799-8365-39f9599a2fec%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22scrollDistance%22%3A25%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A43.934Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A43.934Z%22%2C%22messageId%22%3A%22a88f0daf-3cb3-46a4-b6ca-e9c3c421144f%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22scrollDistance%22%3A50%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A45.850Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A45.850Z%22%2C%22messageId%22%3A%2216613737-9b00-4a39-b39e-7dccb5c8b019%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22location%22%3A%22unknown%22%2C%22productId%22%3A%2222125056%22%2C%22name%22%3A%22Chase%20Sapphire%20Preferred%C2%AE%20Card%20(22125056)%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22text%22%3A%22Card%20Feature%22%2C%22position%22%3A%22bottom%22%2C%22sku%22%3A%22204650%22%2C%22brand%22%3A%22Chase%22%7D%2C%22correlationId%22%3A%22ef043622-5b01-41ef-814f-8a6ecaf1035d%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A45.884Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A45.884Z%22%2C%22messageId%22%3A%225e79f55f-aaf7-49f6-a029-548e45bc77ba%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%22221210132%22%2C%22name%22%3A%22Chase%20Sapphire%20Preferred%26%23174%3B%20Card%20(221210132)%22%2C%22location%22%3A%22unknown%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22position%22%3A1%2C%22sku%22%3A%22220023%22%2C%22brand%22%3A%22Chase%22%7D%2C%22correlationId%22%3A%2223b53058-596f-4514-b6ae-f3b1f5fa9e79%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A45.900Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A45.900Z%22%2C%22messageId%22%3A%22bdd2e435-c5e2-4a03-85fd-d1b2cd57c1ab%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.ecommerce.v1.ProductViewed%22%2C%22product%22%3A%7B%22productId%22%3A%22221210132%22%2C%22name%22%3A%22Chase%20Sapphire%20Preferred%26%23174%3B%20Card%20(221210132)%22%2C%22location%22%3A%22unknown%22%2C%22pageId%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%2C%22position%22%3A5%2C%22sku%22%3A%22220023%22%2C%22brand%22%3A%22Chase%22%7D%2C%22correlationId%22%3A%224ddc1a6f-1813-4fb0-b78e-1928cafb2105%22%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A45.917Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A45.917Z%22%2C%22messageId%22%3A%22097a011f-c093-4316-a554-841c0b6912b4%22%7D&amp;callback=_Tagular.universalCB"></script><script src="https://analytics.cohesionapps.com/beam?data=%7B%22context%22%3A%7B%22sessionId%22%3A%22bc44e11b-e6bd-4ecf-9bb8-c3a2a3d7e0a4%22%2C%22instanceId%22%3A%22b8f4ddc8-5fb9-4192-bdbd-ffb750a11993%22%2C%22manualInstanceId%22%3Anull%2C%22fromManual%22%3Afalse%2C%22page%22%3A%7B%22referrer%22%3A%22https%3A%2F%2Fwww.google.com%2F%22%2C%22title%22%3A%22Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right%22%2C%22url%22%3A%22https%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F%22%7D%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_13_5)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F67.0.3396.99%20Safari%2F537.36%22%2C%22library%22%3A%7B%22name%22%3A%22analytics.js%22%2C%22version%22%3A%225.4.1%22%7D%7D%2C%22event%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22properties%22%3A%7B%22%40type%22%3A%22redventures.usertracking.v3.PageScrolled%22%2C%22scrollDistance%22%3A0%7D%2C%22anonymousId%22%3A%224416cf1a-179e-4382-b783-a2c64b456f30%22%2C%22timestamp%22%3A%222018-07-05T22%3A30%3A49.738Z%22%2C%22writeKey%22%3A%228830ce36-13f9-40da-8176-b8cbf73a598c.17a68289-d4ec-4835-a672-712d0d381d34%22%2C%22sentAt%22%3A%222018-07-05T22%3A30%3A49.738Z%22%2C%22messageId%22%3A%22bf251a58-8a7c-4684-a3cd-d4ef0a6905ac%22%7D&amp;callback=_Tagular.universalCB"></script></head>
+
+<body class="post-template-default single single-post postid-347113 single-format-standard">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHZQXGF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="above-footer">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+<section class="header-nav">
+	<span class="icon icon-x-close toggle-close listener-applied-mobileNav">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" xml:space="preserve">
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+	</svg>
+</span>
+	<div class="header-nav-wrapper">
+		<div class="logo">
+			<a href="https://thepointsguy.com">
+				<span class="tpg-logo tpg-logo-primary">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1042.96 769.26">
+	  <path class="cls-1" d="M569,663.07a3.83,3.83,0,0,0-3.65-4H537.48a8.12,8.12,0,0,1-8.09-8.09v-38.5a8.12,8.12,0,0,1,8.09-8.09h78.91a8.12,8.12,0,0,1,8.09,8.09v68c0,48.56-40.87,88.62-96.31,88.62-55.85,0-90.65-40.87-96.32-89.43-4-34-4-79.32,0-113.31,5.67-48.56,40.47-89.43,96.32-89.43s96.31,38.45,96.31,92.27v.41a8.39,8.39,0,0,1-8.09,8.09H576a8.12,8.12,0,0,1-8.09-8.09v-.41c0-16.59-14.16-35.21-39.66-35.21-24.68,0-37.23,14.57-39.26,32.37-4,34-4,79.32,0,113.31,2,17.81,14.57,32.37,39.26,32.37,24.28,0,40.87-13.36,40.87-31.56v-17.4Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M827.89,679.83c0,49-40.47,89.43-96.32,89.43-55,0-95.5-40.47-95.5-89.43V489.63a8.12,8.12,0,0,1,8.09-8.09H685a8.12,8.12,0,0,1,8.09,8.09v190.2c0,17.81,14.57,32.37,38.44,32.37,24.68,0,39.26-14.57,39.26-32.37V489.63a8.12,8.12,0,0,1,8.09-8.09h40.87a8.12,8.12,0,0,1,8.09,8.09v190.2Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M936.08,599.7a2.53,2.53,0,0,0,4.86,0l38.85-112.09c1.62-4.45,4-6.07,7.69-6.07H1032c5.26,0,8.9,5.26,6.47,11.33L966.8,673.36v83.36a8.12,8.12,0,0,1-8.09,8.09H918.24a8.12,8.12,0,0,1-8.09-8.09V673.35l-71.6-180.48c-2.43-6.07,1.21-11.33,6.48-11.33h44.51c3.64,0,6.07,1.62,7.69,6.07Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M101.68,165.89c46.54,0,85,38.44,85,85,0,46.94-38.45,85-85,85H65.26a3.82,3.82,0,0,0-4,3.63q0,.18,0,.37V441.07a8.12,8.12,0,0,1-8.09,8.09H12.65a8.12,8.12,0,0,1-8.09-8.09V174a8.12,8.12,0,0,1,8.09-8.09h89ZM65.26,222.54a3.82,3.82,0,0,0-4,3.63q0,.18,0,.37v48.59a3.82,3.82,0,0,0,3.63,4h36.79a28.33,28.33,0,0,0,1.06-56.65H65.26Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M390.22,250.87c4,34,4,79.32,0,113.31-5.66,48.56-40.47,89.43-96.31,89.43s-90.65-40.87-96.32-89.43c-4-34-4-79.32,0-113.31,5.67-48.56,40.47-89.43,96.32-89.43S384.55,202.31,390.22,250.87ZM333.16,364.18c4-34,4-79.32,0-113.31-2-17.81-14.57-32.37-39.25-32.37s-37.23,14.57-39.26,32.37c-4,34-4,79.32,0,113.31,2,17.81,14.57,32.37,39.26,32.37S331.13,382,333.16,364.18Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M459.6,441.07a8.12,8.12,0,0,1-8.09,8.09H411a8.12,8.12,0,0,1-8.09-8.09V174a8.12,8.12,0,0,1,8.09-8.09h40.47A8.12,8.12,0,0,1,459.6,174V441.07Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M596.08,449.13c-6.88,0-9.71-3.64-10.93-6.88l-55-142c-.81-2.43-3.64-1.62-3.64.81v140a8.12,8.12,0,0,1-8.09,8.09H478a8.12,8.12,0,0,1-8.09-8.09V174a8.12,8.12,0,0,1,8.09-8.09h48.16c6.07,0,8.9,3.64,10.12,7.28L591.68,327c.81,2.43,3.64,1.62,3.64-.81V174a8.12,8.12,0,0,1,8.09-8.09h40.47A8.12,8.12,0,0,1,652,174V441.07a8.12,8.12,0,0,1-8.09,8.09h-47.8Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M781,226.59V441.07a8.12,8.12,0,0,1-8.09,8.09H732.38a8.12,8.12,0,0,1-8.09-8.09V226.59a3.82,3.82,0,0,0-3.63-4h-51a8.12,8.12,0,0,1-8.09-8.09V174a8.12,8.12,0,0,1,8.09-8.09H835.58a8.12,8.12,0,0,1,8.09,8.09v40.47a8.12,8.12,0,0,1-8.09,8.09H785a3.82,3.82,0,0,0-4,4.05Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M942.15,332.61C891.57,321.28,851.5,299,851.5,246.82c0-47.75,39.26-85.39,92.67-85.39,54.23,0,93.08,37.63,93.08,85.39v6.07a8.12,8.12,0,0,1-8.09,8.09H988.29a8.12,8.12,0,0,1-8.09-8.09v-6.07c0-16.19-12.95-30.35-36-30.35-22.66,0-35.21,12.14-35.21,28.33,0,15.38,15,25.09,36,29.14,56.25,11.33,97.93,34.8,97.93,91,0,52.61-41.28,88.62-98.74,88.62-55.85,0-96.31-39.26-96.31-88.62V352.85a8.12,8.12,0,0,1,8.09-8.09h40.87a8.12,8.12,0,0,1,8.09,8.09V365c0,18.61,14.16,33.18,39.25,33.18,24.28,0,40.06-14.16,40.06-33.18C984.24,347.59,972.51,339.49,942.15,332.61Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M0,59.77V44.48A4,4,0,0,1,3.8,40.66h15a1.65,1.65,0,0,0,1.88-1.87V9.51a4,4,0,0,1,3.81-3.82H41.68a4,4,0,0,1,3.81,3.82V38.79a1.65,1.65,0,0,0,1.87,1.87H68.42a4,4,0,0,1,3.84,3.82V59.77a3.72,3.72,0,0,1-1.12,2.66,3.63,3.63,0,0,1-2.71,1.17h-21a1.65,1.65,0,0,0-1.87,1.85V100a11.35,11.35,0,0,0,3.14,8.07A10.94,10.94,0,0,0,57,111.44H70.4a3.66,3.66,0,0,1,2.67,1.18,3.72,3.72,0,0,1,1.17,2.69v16.42a3.72,3.72,0,0,1-1.17,2.69,3.64,3.64,0,0,1-2.66,1.18H57.07q-16.41,0-26.39-9.34t-10-25.85v-35a1.65,1.65,0,0,0-1.88-1.85H3.8A4,4,0,0,1,0,59.77Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M81.62,131.77V3.82A4,4,0,0,1,85.45,0h17.16a3.74,3.74,0,0,1,2.65,1.13,3.61,3.61,0,0,1,1.17,2.7V36.27A4.46,4.46,0,0,0,108,40q1.54,1.21,4.24.28,2.15-.75,4.62-1.54a23.42,23.42,0,0,1,6.85-.79,36,36,0,0,1,33.39,21.64A33.94,33.94,0,0,1,160,73.48v58.28a4,4,0,0,1-3.83,3.82H139a4,4,0,0,1-3.82-3.82V73.48a10.39,10.39,0,0,0-3.73-8.07q-3.72-3.28-10.62-3.28t-10.63,3.28a10.39,10.39,0,0,0-3.73,8.07v58.28a3.73,3.73,0,0,1-1.12,2.66,3.61,3.61,0,0,1-2.7,1.16H85.45A4,4,0,0,1,81.62,131.77Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-1" d="M166.19,95.58q-.18-3.73-.18-7.74t.18-7.71q.19-3.73.56-6.62a47.15,47.15,0,0,1,3.9-13.94,36,36,0,0,1,8-11.24,37.79,37.79,0,0,1,11.9-7.55A41.14,41.14,0,0,1,206.16,38,47.88,47.88,0,0,1,222,40.5a34.3,34.3,0,0,1,12.38,7.37,33.88,33.88,0,0,1,8.07,11.84,41.76,41.76,0,0,1,2.91,16.13V91.69a3.65,3.65,0,0,1-1.18,2.66,3.7,3.7,0,0,1-2.68,1.17H192.22a2.57,2.57,0,0,0-2.9,2.92q0,8.1,5,12.24a17.92,17.92,0,0,0,11.88,4.14,22.39,22.39,0,0,0,9.35-1.75,11.59,11.59,0,0,0,5.8-6.4q1.3-3.32,4.38-3.32h15.85a4.15,4.15,0,0,1,2.66.93c.77.62,1,1.71.6,3.26a41.08,41.08,0,0,1-12.92,21.78q-9.65,8.44-25.73,8.44a41.14,41.14,0,0,1-15.61-2.8,37.78,37.78,0,0,1-11.9-7.55,35.9,35.9,0,0,1-8-11.28,47.65,47.65,0,0,1-3.9-13.9Q166.38,99.32,166.19,95.58Zm23.32-23a1.66,1.66,0,0,0,1.87,1.77h29.18a1.61,1.61,0,0,0,1.87-1.77,10.62,10.62,0,0,0-1.31-5.36,10.09,10.09,0,0,0-3.65-3.68,20.73,20.73,0,0,0-5.28-2.19,23.21,23.21,0,0,0-6-.79q-8.23,0-12.44,3.26a10.53,10.53,0,0,0-4.24,8.73Z" transform="translate(0.04 0)"></path>
+	  <path class="cls-2" d="M278.08,491.3A131.71,131.71,0,1,0,409.79,623h0A131.71,131.71,0,0,0,278.08,491.3ZM345.3,662.73a5.08,5.08,0,0,1-1.49,3.59l-24.35,24.35a5.08,5.08,0,0,1-8.67-3.59V626.64c0-3.16-3.46-4.79-6.08-2.17l-69.28,69.28a5.08,5.08,0,0,1-7.18,0h0l-18.56-18.62a5.08,5.08,0,0,1,0-7.18h0l69-69c2.81-2.81.88-6.08-2.17-6.08h-60a5.08,5.08,0,0,1-3.55-8.63l24.43-24.35A5.08,5.08,0,0,1,241,558.4h99.25a5.08,5.08,0,0,1,5.08,5.08h0v99.25Z" transform="translate(0.04 0)"></path>
+	</svg>
+</span>
+			</a>
+		</div>
+		<div class="tagline">Maximize your travel.</div>
+
+		<div class="dotted-hr" deluminate_imagetype="png"></div>
+
+					<div class="main-nav">
+			<div class="search-trigger">
+			<span class="search-trigger-label">Search</span>
+			<span class="icon icon-search">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 222.3 232.6" xml:space="preserve">
+		<path d="M222.3,213.5L177,168.2c15.8-17.9,25.4-41.3,25.4-67C202.4,45.4,157,0,101.2,0S0,45.4,0,101.2C0,157,45.4,202.4,101.2,202.4
+			c20.4,0,39.4-6.1,55.3-16.5l46.7,46.7L222.3,213.5z M27,101.2C27,60.3,60.3,27,101.2,27s74.2,33.3,74.2,74.2s-33.3,74.2-74.2,74.2
+			S27,142.1,27,101.2z"></path>
+	</svg>
+</span>			<button>Search Cards, Rewards, Deals…</button>
+		</div>
+	
+	<nav>
+		<a href="https://thepointsguy.com/category/news/" data-cohesion-setup="true">News</a>
+<a href="https://thepointsguy.com/cards/" data-cohesion-setup="true">Top Cards</a>
+<a href="https://thepointsguy.com/business/" data-cohesion-setup="true">Business</a>
+<a href="https://thepointsguy.com/category/reviews/" data-cohesion-setup="true">Reviews</a>
+<a href="/guides/" data-cohesion-setup="true">Guides</a>
+<a href="https://thepointsguy.com/category/deals/" data-cohesion-setup="true">Deals</a>
+<a href="https://thepointsguy.com/category/videos/" data-cohesion-setup="true">Videos</a>
+<a href="http://shop.thepointsguy.com" data-cohesion-setup="true">Shop</a>
+	</nav>
+</div>
+		
+
+		
+<div class="social-icons" deluminate_imagetype="png">
+			<a href="https://facebook.com/thepointsguy/" data-html_text="Facebook" data-position-id="top" data-cohesion-attrs="html_text,positionId" class="facebook-icon" title="Like us on Facebook" data-cohesion-setup="true">
+			<span class="icon icon-facebook circle">
+	<svg version="1.1" viewBox="0 0 2048 2048" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<path transform="scale(1, -1) translate(0, -2048)" d="M2048 1011q0 -221 -100 -429t-274 -350q-174 -143 -394 -200v779h219l37 256h-256v225q0 116 112 116h163v238q-76 17 -184 17q-180 1 -275 -91t-95 -249v-256h-233v-256h233v-811q-205 4 -390 87t-319 219t-213 324t-79 395t81 397t219 326q138 138 326 219
+q190 81 398 81t398 -81t326 -219q138 -138 219 -326q81 -190 81 -411z"></path>
+	</svg>
+</span>			<span class="social_text">Facebook</span>
+		</a>
+	
+			<a href="https://www.instagram.com/thepointsguy/" data-html_text="Instagram" data-position-id="top" data-cohesion-attrs="html_text,positionId" class="instagram-icon" title="Follow us on Instagram" data-cohesion-setup="true">
+			<span class="icon icon-instagram circle">
+	<svg version="1.1" viewBox="0 0 2048 2048" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<path transform="scale(1, -1) translate(0, -2048)" d="M1621 597v854q1 71 -49 121t-121 49h-854q-71 1 -121 -49t-49 -121v-854q-1 -71 49 -121t121 -49h854q71 -1 121 49t49 121zM1024 2048q208 0 398 -81t326 -219q138 -138 219 -326q81 -190 81 -398t-81 -398t-219 -326q-138 -138 -326 -219q-190 -81 -398 -81t-398 81
+t-326 219q-138 138 -219 326q-81 190 -81 398t81 398t219 326q138 138 326 219q190 81 398 81zM1493 1109v-512q-1 -17 -13 -29t-29 -13h-854q-17 1 -29 13t-13 29v512h138q-10 -39 -10 -85q-1 -141 99 -241t242 -100t242 100t99 241q0 46 -10 85h138zM1493 1451v-128
+q-1 -19 -13 -31t-29 -12h-128q-19 0 -31 12t-12 31v128q0 17 12 29t31 13h128q17 -1 29 -13t13 -29zM811 1024q1 88 63 150t150 63q88 -1 150 -63t63 -150q-1 -88 -63 -150t-150 -63q-88 1 -150 63t-63 150z"></path>
+	</svg>
+</span>			<span class="social_text">Instagram</span>
+		</a>
+	
+			<a href="http://snapchat.com/add/thepointsguy" data-html_text="Snapchat" data-position-id="top" data-cohesion-attrs="html_text,positionId" class="snapchat-icon" title="Add us on Snapchat" data-cohesion-setup="true">
+			<span class="icon icon-snapchat circle">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 118.9 118.9" xml:space="preserve">
+		<path d="M59.4,0C26.6,0,0,26.6,0,59.4s26.6,59.4,59.4,59.4s59.4-26.6,59.4-59.4S92.3,0,59.4,0z M99,84.5c-1.9,0.8-4.1,1.2-6,1.9
+		c-1,0.4-2.4,1.1-2.5,1.8c-0.6,3.7-2.9,3.9-5.9,3.5c-5-0.7-9.4,0.6-13.5,3.6c-7.8,5.7-15.7,5.6-23.5-0.2c-4.5-3.3-9.4-4.4-14.8-3.1
+		c-2,0.5-3.6,0.3-3.7-2c-0.2-3-2.1-3.7-4.5-4.1c-0.4-0.1-0.9-0.1-1.2-0.3c-2.1-1.2-4.2-2.5-6.2-3.7c1.8-1.1,3.6-2.4,5.5-3.3
+		c5.7-2.8,9.8-7.1,12.5-12.8c1.5-3.2,0.7-5.4-2.8-6.6c-1.6-0.5-3.3-1.1-4.6-2.2c-0.9-0.7-1.3-2.2-2-3.3c1.3-0.7,2.5-2,3.8-2
+		c2-0.1,4.1,0.6,6.6,1.1c0-3.8,0.1-6.9,0-9.9c-0.4-10.5,5-18.8,14.4-22.1c10.7-3.8,22.5-0.8,28.1,7.8c2.1,3.1,3.1,7.2,3.7,11
+		c0.6,4.1,0.1,8.4,0.1,13.2c2.3-0.4,4.2-1.1,6-1c1.6,0.1,3.1,1.3,4.7,1.9c-0.8,1.3-1.6,2.7-2.5,3.8c-0.4,0.5-1.2,0.7-1.9,0.9
+		c-6.5,2.8-7,4.3-3.2,10.3c3.2,5.1,7.5,8.8,13.2,10.7c1.1,0.4,2,1.6,3,2.5C100.8,82.9,100.1,84.1,99,84.5z"></path>
+	</svg>
+</span>
+			<span class="social_text">Snapchat</span>
+		</a>
+	
+			<a href="https://twitter.com/thepointsguy/" data-html_text="Twitter" data-position-id="top" data-cohesion-attrs="html_text,positionId" class="twitter-icon" title="Follow us on Twitter" data-cohesion-setup="true">
+			<span class="icon icon-twitter circle">
+	<svg version="1.1" viewBox="0 0 2048 2048" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<path transform="scale(1, -1) translate(0, -2048)" d="M1358 1536q-124 0 -207 -85q-84 -85 -84 -207q0 -37 7 -66q-180 9 -336 90t-266 216q-38 -70 -38 -146t34 -140t94 -103q-69 0 -131 36v-3q0 -105 66 -185t167 -102q-31 -9 -67 -9t-64 5q27 -87 101 -141t170 -56q-171 -133 -361 -133q-15 0 -68 5q197 -128 445 -128
+q155 0 291 49q248 89 392 311t144 467v38q78 55 145 150q-81 -34 -168 -46q92 54 125 162q-84 -50 -182 -71q-85 92 -209 92zM1024 2048q208 0 398 -81t327 -218t218 -327t81 -398t-81 -398t-218 -327t-327 -218t-398 -81t-398 81t-327 218t-218 327t-81 398t81 398t218 327
+t327 218t398 81z"></path>
+	</svg>
+</span>			<span class="social_text">Twitter</span>
+		</a>
+	</div>
+
+		<div class="disclosure toggle-open listener-applied-disclosure">
+			<button>Advertiser Disclosure</button>
+		</div>
+
+	</div>
+</section>
+
+<section class="mobile-nav">
+	<div class="logo">
+		<a href="https://thepointsguy.com">
+			<span class="tpg-logo tpg-logo-secondary">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1158.45 467.85">
+	  <path class="cls-1" d="M263.43,97.84a6.58,6.58,0,0,1,6.58,6.58V447.61a14.28,14.28,0,0,0,14.22,14.23h63.66A13.15,13.15,0,0,0,361,448.73V285.84a6,6,0,0,1,6-6h58.75a135.19,135.19,0,0,0,67.91-18.6.1.1,0,0,1,.15.09c.66,22.4,2.14,44,4.45,63.42,9.07,77.75,64,143.11,153.37,143.11,88.77,0,153.37-64.21,153.37-142V216.23a11.39,11.39,0,0,0-11.39-11.39H667.47A14.51,14.51,0,0,0,653,219.31V278.5a14.38,14.38,0,0,0,14.34,14.34h44a5.68,5.68,0,0,1,5.68,5.68v27.39c0,29.16-26.11,50.54-65,50.54-39.52,0-59.38-23.33-62.62-51.83-6.48-54.43-6.37-127,.11-181.42,3.24-28.51,22.4-51.83,61.92-51.83,40.82,0,62.57,29.8,62.57,56.37v.55a13.61,13.61,0,0,0,13.57,13.55h66.14c7.13,0,11.29-7,11.29-13.46v-.65C805,61.56,741,0,651.63,0c-53.06,0-93.83,23.4-120.45,58.38a.1.1,0,0,1-.14,0l0,0A135,135,0,0,0,425.74,7.84H13.51A13.55,13.55,0,0,0,0,21.35V84.77A13.1,13.1,0,0,0,13.06,97.84H93.42a6.58,6.58,0,0,1,6.58,6.58V447.61a14.28,14.28,0,0,0,14.23,14.23h64.29A12.48,12.48,0,0,0,191,449.36V104.42a6.58,6.58,0,0,1,6.58-6.58Zm162.32,91H367.54A6.54,6.54,0,0,1,361,182.3h0V104.42a6.58,6.58,0,0,1,6.58-6.58h57.07c26.78,0,48.17,21.92,46.34,48.64a45.63,45.63,0,0,1-45.25,42.36Z" transform="translate(0 -0.01)"></path>
+	  <path class="cls-2" d="M996.3,142.95A162.15,162.15,0,1,0,1158.45,305.1,162.15,162.15,0,0,0,996.3,142.95ZM1079.06,354a6.26,6.26,0,0,1-1.83,4.42l-30,30a6.26,6.26,0,0,1-10.68-4.42v-74.4c0-3.89-4.25-5.9-7.48-2.67L943.8,392.19a6.26,6.26,0,0,1-8.85,0l-22.86-22.86a6.26,6.26,0,0,1,0-8.85L997,275.54c3.45-3.45,1.08-7.48-2.67-7.48H920.54a6.26,6.26,0,0,1-4.42-10.69l30.08-30a6.25,6.25,0,0,1,4.42-1.82h122.19a6.26,6.26,0,0,1,6.26,6.26h0V354Z" transform="translate(0 -0.01)"></path>
+	  <path class="cls-1" d="M1079.06,354a6.26,6.26,0,0,1-1.83,4.42l-30,30a6.26,6.26,0,0,1-10.68-4.42v-74.4c0-3.89-4.25-5.9-7.48-2.67L943.8,392.19a6.26,6.26,0,0,1-8.85,0l-22.86-22.86a6.26,6.26,0,0,1,0-8.85L997,275.54c3.45-3.45,1.08-7.48-2.67-7.48H920.54a6.26,6.26,0,0,1-4.42-10.69l30.08-30a6.25,6.25,0,0,1,4.42-1.82h122.19a6.26,6.26,0,0,1,6.26,6.26h0V354Z" transform="translate(0 -0.01)"></path>
+	</svg>
+</span>		</a>
+	</div>
+
+	<div class="disclosure toggle-open listener-applied-disclosure">
+		<button>Advertiser Disclosure</button>
+	</div>
+
+	<button class="menu toggle-open listener-applied-mobileNav" deluminate_imagetype="png">
+		Menu	</button>
+</section>
+
+
+<div id="search" class="search-modal"><div data-reactroot="" class="search"><div class="search-wrapper"><span class="x-close-container"><span class="isvg loaded icon-x-close"><span class="icon icon-x-close">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" xml:space="preserve">
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+	</svg>
+</span>
+</span></span><form class="search-bar"><input type="text" class="" placeholder="Search Cards, Rewards, Deals…" value=""></form><div class="search-state"><div class="before-search"><section class="search-trending-topics"><div class="section-header small">Trending Topics</div><div class="suggestions-block"><a href="https://thepointsguy.com/tag/deals/">Deals</a><a href="https://thepointsguy.com/tag/flight-reviews/">Flight Reviews</a><a href="https://thepointsguy.com/tag/hotel-reviews/">Hotel Reviews</a></div></section><section class="horizontal-articles"><header><h3>Top Cards Today</h3></header><section class="articles"><article><a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=SEARCH" title="The Business Platinum® Card from American Express OPEN"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="The Business Platinum® Card from American Express OPEN" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=SEARCH" title="The Business Platinum® Card from American Express OPEN">The Business Platinum® Card from American Express OPEN</a></div></div></article><article><a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=SEARCH" title="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=SEARCH" title="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®">Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®</a></div></div></article><article><a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=SEARCH" title="Chase Sapphire Preferred® Card"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="Chase Sapphire Preferred® Card" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=SEARCH" title="Chase Sapphire Preferred® Card">Chase Sapphire Preferred® Card</a></div></div></article><article><a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=SEARCH" title="Capital One® Venture® Rewards Credit Card"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="Capital One® Venture® Rewards Credit Card" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=SEARCH" title="Capital One® Venture® Rewards Credit Card">Capital One® Venture® Rewards Credit Card</a></div></div></article><article><a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=SEARCH" title="The Platinum Card® from American Express"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="The Platinum Card® from American Express" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=SEARCH" title="The Platinum Card® from American Express">The Platinum Card® from American Express</a></div></div></article><article><a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=SEARCH" title="Ink Business Preferred℠ Credit Card"><div class="attachment-image attachment-card size-card lazyautosizes lazyload" sizes="962px"><figure><img data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=107%2C67px&amp;ssl=1" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=500%2C312px&amp;#038;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=409%2C255px&amp;#038;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=254%2C154px&amp;#038;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=150%2C94px&amp;#038;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=107%2C67px&amp;#038;ssl=1 107w" data-sizes="(min-width: 1410px) 500px,(min-width: 1020px) and (max-width: 1210px) 409px,(min-width: 740px) and (max-width: 1020px) 254px,(min-width: 600px) and (max-width: 740px) 150px,(max-width: 600px) 107px,500px" class="attachment-card size-card lazyautosizes lazyload" width="70" height="45" alt="Ink Business Preferred℠ Credit Card" sizes="962px"></figure></div></a><div class="link"><div class="label stripped"><a href="" title=""></a></div><div class="title"><a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=SEARCH" title="Ink Business Preferred℠ Credit Card">Ink Business Preferred℠ Credit Card</a></div></div></article></section></section></div></div></div></div></div>
+
+<div id="notification-waypoint"></div>
+
+		
+<div class="use-lightbox template-two-columns article-header has-background-image has-overlay">
+	<img width="1280" height="400" class="background-image lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=2327&amp;ssl=1 2327w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=1200&amp;ssl=1 1200w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=800&amp;ssl=1 800w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=480&amp;ssl=1 480w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=480&amp;ssl=1" sizes="962px" srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=2327&amp;ssl=1 2327w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=1200&amp;ssl=1 1200w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=800&amp;ssl=1 800w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=480&amp;ssl=1 480w" src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2017/06/airbnb2.jpg?crop=0px%2C642px%2C3572px%2C1116px&amp;w=480&amp;ssl=1">	<div class="article-header-wrapper">
+					<div class="label"><a href="https://thepointsguy.com/category/news/" title="News">News</a></div>
+				<h1 class="title">Thinking of Becoming an Airbnb Host? Here’s How to Do It Right</h1>
+					
+<div class="meta">
+	<div class="byline">by&nbsp;<a href="https://thepointsguy.com/author/jessiefesta/" title="Jessie Festa">Jessie Festa</a></div>
+	<div class="timestamp" data-timestamp="2017-07-02 23:00:15.000">July 2nd, 2017</div>
+			<div class="social">
+				<div class="social-sharing">
+		<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-347113" class="share-facebook sd-button share-icon no-text" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span><span class="share-count">144</span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)<span class="share-count">144</span></span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-347113" class="share-twitter sd-button share-icon no-text" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+					<div class="comments-count with-icon">
+		<a href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/#comments">
+			<span class="icon icon-comment">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.64 27.35">
+		<path d="M26.64,0H4A4,4,0,0,0,0,4V17.55a4,4,0,0,0,4,4H8.17v5.3a0.5,0.5,0,0,0,.83.38l6.56-5.68H26.64a4,4,0,0,0,4-4V4A4,4,0,0,0,26.64,0Z"></path>
+	</svg>
+</span>			<span class="counter disqus-comment-count" data-disqus-url="http://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/">23</span>
+		</a>
+	</div>
+			</div>
+	</div>
+			</div>
+</div>
+
+<section class="favorite-cards favorite-cards-small">
+	<div class="favorite-cards-wrapper">
+
+					<div class="favorite-cards-meta">
+				<div class="title">Our Favorite<br> Partner Cards</div>
+							</div>
+		
+		<div class="cards-wrapper">
+			
+<div class="card" data-product-id="22034405" data-channel="162523" data-name="The Business Platinum® Card from American Express OPEN (22034405)" data-issuer="American Express" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1" sizes="78px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1 107w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">
+				The Business Platinum® Card from American Express OPEN			</a>
+		</div>
+
+								
+				<div class="current-offer">
+					Limited Time Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">Up to 100,000 points.<br><strike><small>Up to 75,000 points</small></strike><br></a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="221412045" data-channel="221412045" data-name="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard® (221412045)" data-issuer="Citi" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=500%2C312px&amp;ssl=1 500w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=409%2C255px&amp;ssl=1 409w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=254%2C154px&amp;ssl=1 254w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=150%2C94px&amp;ssl=1 150w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1" sizes="78px" srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=500%2C312px&amp;ssl=1 500w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=409%2C255px&amp;ssl=1 409w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=254%2C154px&amp;ssl=1 254w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=150%2C94px&amp;ssl=1 150w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1 107w" src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">
+				Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®			</a>
+		</div>
+
+								
+				<div class="current-offer">
+					Limited Time Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">60,000 miles<br><strike><small>50,000 miles</small></strike><br></a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="22125056" data-channel="204650" data-name="Chase Sapphire Preferred® Card (22125056)" data-issuer="Chase" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1" sizes="74px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1 107w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">
+				Chase Sapphire Preferred® Card			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">50,000 points</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="22105772" data-channel="ce293c61587c41c29a64c5685cb78e40" data-name="Capital One® Venture® Rewards Credit Card (22105772)" data-issuer="Capital One" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=500%2C312px&amp;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=409%2C255px&amp;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=254%2C154px&amp;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=150%2C94px&amp;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1" sizes="74px" srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=500%2C312px&amp;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=409%2C255px&amp;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=254%2C154px&amp;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=150%2C94px&amp;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1 107w" src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">
+				Capital One® Venture® Rewards Credit Card			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">50,000 miles</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+		</div>
+
+					<div class="more-link dark">
+				<a href="https://thepointsguy.com/cards/">See All</a>
+			</div>
+			</div>
+</section>
+
+<div class="post-content use-lightbox template-two-columns">
+	<section class="article-content">
+		<div class="article-wrapper">
+
+			
+<section class="editorial-disclosure">
+	<p>This post contains references to products from one or more of our advertisers. We may receive compensation when you click on links to those products. For an explanation of our Advertising Policy, visit <a href="/advertising-policy/">this page</a>.</p>
+</section>
+
+			<div class="article-body-content">
+				<p>Is it safe? Aren’t you worried about people touching your stuff? How will you manage running a rental all by yourself? These are just a few of the many questions I’ve gotten from curious friends when I decided that, after one too many eccentric roommates, I was going to&nbsp;rent out the second room in my swanky Brooklyn apartment on <a href="http://thepointsguy.com/airbnb-host/">Airbnb</a>. And after doing so&nbsp;for almost three years, I can honestly say it was worth all the time, money and energy — because it <em>is</em> an investment — and you’ll reap the rewards if you do it right. Here’s how to be&nbsp;not just <a href="http://thepointsguy.com/airbnb-host/">a good Airbnb host</a>, but a <em>great</em> one.</p>
+<h2>1. Always Be Upfront With Guests</h2>
+<p>When you’re filling out your host profile, it might be tempting to add a little Photoshop magic to that hole in the wall or use poetic license to your advantage. While my Brooklyn <a href="https://thepointsguy.com/2016/04/how-to-avoid-airbnb-scams/">Airbnb</a> wasn’t the nicest apartment ever&nbsp;— it’s&nbsp;an old building that was never renovated, had banging pipes, showcased the world’s smallest bathroom and the shower didn’t drain properly — I priced it out accordingly and was always open about the condition it was in. Not surprisingly, I attracted a lot of budget travelers and backpackers who just wanted a cheap, clean room to retreat to — all of whom&nbsp;gave me stellar reviews in the process.</p>
+<figure id="attachment_347643" style="width: 830px" class="wp-caption aligncenter"><a href="https://thepointsguy.com/wp-content/uploads/2017/06/street_art_jessieonajourney.jpg"><img class="lazyautosizes wp-image-347643 size-full lazyloaded " alt="Along with offering a clean room, I also loved showing guests around Brooklyn. Image by the author, taken in the Bushwick Collective." style="width:830px" data-sizes="auto" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/street_art_jessieonajourney.jpg?fit=2048%2C2048px&amp;ssl=1" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/street_art_jessieonajourney.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" sizes="830px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/street_art_jessieonajourney.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/street_art_jessieonajourney.jpg?fit=2048%2C2048px&amp;ssl=1"></a><figcaption class="wp-caption-text">Along with offering a clean room, I also loved showing guests around Brooklyn. Image by the author, taken in the Bushwick Collective.</figcaption></figure>
+<h2>2.&nbsp;Familiarize Yourself With Local Laws</h2>
+<p>Most people I know here in&nbsp;<a href="https://thepointsguy.com/guide/points-miles-guide-new-york/">New York City</a>&nbsp;who are hosting their rooms and apartments are doing it without letting their landlords know or are actually going against their leases to do it (since it counts as subletting). While many&nbsp;manage to be hosts without having any issues, keep in mind that if your landlord or neighbors find out about it, there may be consequences so it’s worth <a href="https://www.airbnb.com/help/article/868/new-york--ny">looking up the local laws</a>&nbsp;so you can have a plan, or even buying your own space if you don’t want to worry about it at all. You can also try finding a landlord who doesn’t mind, though this&nbsp;might prove to be a challenge.</p>
+<h2>3. Adopt a Business Mindset</h2>
+<p>If you’re looking to really make money through <a href="https://thepointsguy.com/2017/01/how-to-find-your-dream-airbnb/">Airbnb</a> hosting, consider what you can offer to make your listing even more attractive. Maybe it’s providing breakfast and coffee, a free guided walk through your neighborhood&nbsp;or a discount for longer bookings. Within your hosting profile, you’ll be able to turn on the Smart Pricing feature,&nbsp;which&nbsp;lets you set your prices to automatically go up or down based on changes in demand for listings like yours, controlled by settings you can adjust at any time.</p>
+<figure id="attachment_347980" style="width: 830px" class="wp-caption aligncenter"><a href="https://thepointsguy.com/wp-content/uploads/2017/06/breakfast-1804457_1280.jpg"><img class="lazyautosizes wp-image-347980 size-full lazyloaded " alt="Offering breakfast is a great way to be a better AirBnB host. Photo courtesy of <a href=&quot;https://pixabay.com/en/breakfast-healthy-colorful-hummus-1804457/&quot;>Einladung_zum_Essen/Pixabay.com</a>." style="width:830px" data-sizes="auto" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/breakfast-1804457_1280.jpg?fit=2048%2C2048px&amp;ssl=1" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/breakfast-1804457_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" sizes="830px" srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/breakfast-1804457_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/breakfast-1804457_1280.jpg?fit=2048%2C2048px&amp;ssl=1"></a><figcaption class="wp-caption-text">Offering breakfast is a great way to be a better Airbnb host. Image courtesy of <a href="https://pixabay.com/en/breakfast-healthy-colorful-hummus-1804457/">Einladung_zum_Essen/Pixabay.com</a>.</figcaption></figure>
+<h2>4. Remember: Most of Your Guests Will Be Amazing</h2>
+<p>The biggest benefit I saw after going from having on-the-lease roommates to solely <a href="https://thepointsguy.com/2016/12/testing-out-hotels-and-airbnbs-in-havana-cuba/">Airbnb</a> guests was just that — the people who stayed with me acted like guests. They didn’t expect me to do their dishes, nor did they come home at 4:00am drunk and throw up on my couch. Many even brought gifts like chocolate or wine from their home countries, which added a fun, cultural component to the experience.</p>
+<h2>5. Stick up for Yourself</h2>
+<p>I say this not to scare anyone from hosting, but just to be real: Over the years I’ve had a handful of guests (three, to be exact) I needed to ask to leave. One guy kept bringing random girls back to the apartment — keep in mind, I was also living there, in the other room — while another kept making very disrespectful passes at my girlfriends, and the other&nbsp;took my polite offer to grab a drink to mean he could make advances toward me for the rest of his stay.&nbsp;If someone does something that makes you feel uncomfortable, don’t be afraid to stand your ground or even get Airbnb involved. While the company can be&nbsp;tough to contact by phone,&nbsp;it’s very responsive on Twitter via @Airbnb so send a direct message if you have any issues. Additionally, make sure you fill out the House Rules section on your host profile so guests know what’s okay — and what’s not — while they’re staying there.</p>
+<figure id="attachment_347979" style="width: 830px" class="wp-caption aligncenter"><a href="https://thepointsguy.com/wp-content/uploads/2017/06/iphone-500291_1280.jpg"><img class="lazyautosizes wp-image-347979 size-full lazyloaded " alt="If you need help, AirBnB is very responsive on social media. Photo courtesy of <a href=&quot;https://pixabay.com/en/iphone-template-mockup-mock-up-500291/&quot;>Jeshoots/Pixabay.com.</a>" style="width:830px" data-sizes="auto" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/iphone-500291_1280.jpg?fit=2048%2C2048px&amp;ssl=1" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/iphone-500291_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" sizes="830px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/iphone-500291_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2017/06/iphone-500291_1280.jpg?fit=2048%2C2048px&amp;ssl=1"></a><figcaption class="wp-caption-text">If you need help, Airbnb is very responsive on social media. Image courtesy of <a href="https://pixabay.com/en/iphone-template-mockup-mock-up-500291/">Jeshoots/Pixabay.com.</a></figcaption></figure>
+<h2>6. Consider Making Minimum-Night Stay Requirements</h2>
+<p>This is just a personal preference, but it’s worth noting that if you’re letting people book one night only, you’ll be doing a lot of laundry and clean-up more than you need to. You also might miss out on a longer and more lucrative booking simply because a one-night stay overlaps with it, so listing your place with minimum-night stay requirements might work out better for you.</p>
+<h2>7. Keep All Payments and Messaging Within Airbnb</h2>
+<p><a href="https://thepointsguy.com/2017/02/3x-skymiles-with-airbnb/">Airbnb</a> does take a cut of your profit, and while it may be tempting when you get an offer to be paid with cash or otherwise handle the booking one-on-one without the middleman, you’ll be leaving yourself vulnerable. Hosting your place through&nbsp;the service means you’re ensured by <a href="https://thepointsguy.com/2016/11/earn-skymiles-airbnb-stays/">Airbnb</a>&nbsp;for up to $1 million in case something happens. It also means there’s an added security benefit&nbsp;since the company vets and knows who is coming into your home. The few times where I experienced any issues with guests, it felt good having a competent customer support department to help me sort things out. If you want even more&nbsp;peace of mind, consider adding a homeowner’s or renter’s insurance policy — I ended up getting an inexpensive renter’s policy through State Farm and was able to add on an extra floater policy to protect all my valuables —&nbsp;like my laptop and DSLR camera — when I’m traveling.</p>
+<figure id="attachment_347978" style="width: 830px" class="wp-caption aligncenter"><a href="https://thepointsguy.com/wp-content/uploads/2017/06/home-office-336373_1280.jpg"><img class="lazyautosizes wp-image-347978 size-full lazyloaded " alt="Having additional coverage can give you peace of mind that your valuables are safe. Image courtesy of Unsplash/Pixabay.com." style="width:830px" data-sizes="auto" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/home-office-336373_1280.jpg?fit=2048%2C2048px&amp;ssl=1" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/home-office-336373_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" sizes="830px" srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/home-office-336373_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/home-office-336373_1280.jpg?fit=2048%2C2048px&amp;ssl=1"></a><figcaption class="wp-caption-text">Having additional coverage can give you peace of mind that your valuables are safe. Image courtesy of <a href="https://pixabay.com/en/home-office-workstation-office-336373/">Unsplash/Pixabay.com</a>.</figcaption></figure>
+<h2>8.&nbsp;Use Referral Links to Grow Your Travel Fund</h2>
+<p>Every Airbnb member —&nbsp;whether a traveler or a host —&nbsp;gets a unique referral link that earns them Airbnb credit whenever they get someone to sign up,&nbsp;typically about $25-$35 if you <a href="http://thepointsguy.com/airbnbtpg">refer a traveler</a> (once they book a stay for $75 or more) and $75 if you refer someone who <a href="http://thepointsguy.com/airbnb-host/">becomes a host</a> (once they welcome their first guest). Last summer, my boyfriend and I were planning a trip to the <a href="https://thepointsguy.com/2016/06/things-to-do-south-of-france-this-summer/">South of France</a>&nbsp;and&nbsp;he decided to&nbsp;rent out his room in Brooklyn while we were out of town. When he welcomed his first guest, I got a $75 credit —&nbsp;plus another $35 when he booked our stay in <a href="https://thepointsguy.com/2016/02/10-photos-of-monaco-italy-and-the-south-of-france/">Cannes</a>. He then told his three roommates his plan and soon enough, all of them wanted to make some extra cash and rent out their rooms as well. As a result, another $225 in Airbnb credit went into our travel pot, allowing us to spend&nbsp;three nights in a fairytale castle in Provence. That’s the magic of Airbnb; you can stay in all sorts of awesome accommodations,&nbsp;from <a href="https://thepointsguy.com/2016/10/best-airbnbs-havana-cuba/">a fabulous Cuban penthouse in Havana</a>&nbsp;to an Argentinian vineyard, and everything&nbsp;in between.</p>
+<h2>9. Think Twice About Turning on Automatic Booking</h2>
+<p>Yes, you’ll probably end up getting more bookings if you activate the auto-booking feature,&nbsp;but hear me out. There have been many times over the years when lifestyles just haven’t been a match and I’ve had to deny a booking. <a href="http://jessieonajourney.com/">I’m a travel writer</a> who likes quiet, so when I had a guest tell me he was a DJ coming to NYC and if I minded if he practiced in the room, I declined the reservation. When I had another guest ask me if I cared if he brought women back to the apartment, I also declined. It’s smart to understand who will be staying with you and the nature of their visit, especially if you’ll be home at the same time.</p>
+<figure id="attachment_347977" style="width: 830px" class="wp-caption aligncenter"><a href="https://thepointsguy.com/wp-content/uploads/2017/06/record-336626_1280.jpg"><img class="lazyautosizes wp-image-347977 size-full lazyloaded " alt="DJ practice in my apartment? No thanks! Photo courtesy of <a href=&quot;https://pixabay.com/en/record-player-disk-turntable-vinyl-336626/&quot;>Unsplash/Pixabay.com.</a>" style="width:830px" data-sizes="auto" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/record-336626_1280.jpg?fit=2048%2C2048px&amp;ssl=1" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/record-336626_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" sizes="830px" srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/record-336626_1280.jpg?fit=2048%2C2048px&amp;ssl=1 2048w" src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2017/06/record-336626_1280.jpg?fit=2048%2C2048px&amp;ssl=1"></a><figcaption class="wp-caption-text">DJ practice in my apartment? No thanks! Image courtesy of <a href="https://pixabay.com/en/record-player-disk-turntable-vinyl-336626/">Unsplash/Pixabay.com.</a></figcaption></figure>
+<h2>10. Create a Fridge “Concierge Station”</h2>
+<p>Write up a document with fun things to see and do in your neighborhood, transportation tips, coupons or maps that might be helpful, and hang them on your fridge. It’ll alleviate any confusion for guests, who can use these things as reference, and save you from having to repeat yourself 1,000 times every time someone stays at your place.</p>
+<p><em>Do you have any <a href="http://thepointsguy.com/airbnb-host/">Airbnb hosting</a> tips of your own to add? Sound off, below.</em></p>
+<p><em>Featured image by the author.</em></p>
+	<div class="social-sharing">
+		<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-347113" class="share-facebook sd-button share-icon no-text" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span><span class="share-count">144</span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)<span class="share-count">144</span></span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-347113" class="share-twitter sd-button share-icon no-text" href="https://thepointsguy.com/2017/07/how-to-be-a-great-airbnb-host/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>	</div>
+	
+<section class="card-feature" data-product-id="22125056" data-channel="204650" data-name="Chase Sapphire Preferred® Card (22125056)" data-issuer="Chase" data-location="unknown" data-cohesion-attrs="productId,channel,name,issuer,location" data-cohesion-setup="true">
+
+	<div class="title"></div>
+	<div class="header">The best beginner points and miles card out there.</div>
+	<div class="sub-header">Chase Sapphire Preferred® Card</div>
+
+	<div class="summary-wrapper">
+					<div class="summary">
+				<p>With great travel benefits,&nbsp;2x points on travel &amp; dining and a 50,000 point sign up bonus, the&nbsp;Chase Sapphire Preferred&nbsp;is a great card for those looking to get into the points and miles game. <a href="/guide/5-reasons-to-get-chase-sapphire-preferred/">Here are the top 5 reasons</a> it should be in your wallet, or <a href="/guide/chase-sapphire-preferred-review/">read our definitive review</a> for more details.</p>
+			</div>
+		
+		<div class="card">
+			<div class="img-wrapper">
+				<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=CARD-FEATURE" data-amp-replace="QUERY_PARAM" target="_blank" data-cohesion-setup="true" data-product-id="221210132" data-channel="220023" data-name="Chase Sapphire Preferred&amp;#174; Card (221210132)" data-issuer="Chase" data-location="unknown" data-cohesion-attrs="productId,channel,name,issuer,location">
+							<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1" sizes="170px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1 107w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+							</a>
+			</div>
+		</div>
+	</div>
+
+	<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=CARD-FEATURE" class="apply" data-amp-replace="QUERY_PARAM" target="_blank" data-cohesion-setup="true" data-product-id="221210132" data-channel="220023" data-name="Chase Sapphire Preferred&amp;#174; Card (221210132)" data-issuer="Chase" data-location="unknown" data-cohesion-attrs="productId,channel,name,issuer,location">
+		Apply Now	</a>
+
+				<div class="more-things-to-know">
+	<div class="overlay"></div>
+
+	<div class="sub-header">More Things to Know</div>
+	<div class="card-content">
+		<ul><li>Earn 50,000 bonus points after you spend $4,000 on purchases in the first 3 months from account opening. That's $625 toward travel when you redeem through Chase Ultimate Rewards®</li><li>Chase Sapphire Preferred® named a 'Best Travel Credit Card' by MONEY® Magazine, 2016-2017</li><li>2X points on travel and dining at restaurants worldwide &amp; 1 point per dollar spent on all other purchases.</li><li>Earn 5,000 bonus points after you add the first authorized user and make a purchase in the first 3 months from account opening</li><li>No foreign transaction fees</li><li>1:1 point transfer to leading airline and hotel loyalty programs</li><li>Get 25% more value when you redeem for travel through Chase Ultimate Rewards. For example, 50,000 points are worth $625 toward travel.</li><li>No blackout dates or travel restrictions - as long as there's a seat on the flight, you can book it through Chase Ultimate Rewards</li></ul>	</div>
+
+			<div class="terms">
+							<div class="term">
+					<div class="sub-header">Intro APR on Purchases</div>
+					<div class="description">N/A</div>
+				</div>
+							<div class="term">
+					<div class="sub-header">Regular APR</div>
+					<div class="description">17.49% - 24.49% Variable</div>
+				</div>
+							<div class="term">
+					<div class="sub-header">Annual Fee</div>
+					<div class="description">$0 Intro for the First Year, then $95</div>
+				</div>
+							<div class="term">
+					<div class="sub-header">Balance Transfer Fee</div>
+					<div class="description">Either $5 or 5% of the amount of each transfer, whichever is greater.</div>
+				</div>
+							<div class="term">
+					<div class="sub-header">Recommended Credit</div>
+					<div class="description">Excellent Credit</div>
+				</div>
+					</div>
+	</div>
+<div class="carat-trigger toggle-open toggle-close listener-applied-cardFeature"></div>
+	</section>
+
+<section class="comments-disclosure">
+	<p>Editorial Disclaimer: Opinions expressed here are author’s alone, not those of any bank, credit card issuer, airlines or hotel chain, and have not been reviewed, approved or otherwise endorsed by any of these entities.</p>
+<p>Disclaimer: The responses below are not provided or commissioned by the bank advertiser. Responses have not been reviewed, approved or otherwise endorsed by the bank advertiser. It is not the bank advertiser’s responsibility to ensure all posts and/or questions are answered.</p>
+</section>
+
+<div id="comments"></div>
+<div id="disqus_thread"><iframe id="dsq-app8878" name="dsq-app8878" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="https://disqus.com/embed/comments/?base=default&amp;f=thepointsguy&amp;t_u=http%3A%2F%2Fthepointsguy.com%2F2017%2F07%2Fhow-to-be-a-great-airbnb-host%2F&amp;t_d=Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right&amp;t_t=Thinking%20of%20Being%20an%20Airbnb%20Host%3F%20Here's%20How%20to%20Do%20it%20Right&amp;s_o=default#version=48537a333e429dcb726ce9cdcc57a44f" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 4547px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+			</div>
+		</div>
+	</section>
+			<aside class="sidebar" role="complementary">
+					<div class="credit-card-widget" data-product-id="22105772" data-channel="ce293c61587c41c29a64c5685cb78e40" data-name="Capital One® Venture® Rewards Credit Card (22105772)" data-issuer="Capital One" data-html_text="RG1" data-cohesion-attrs="productId,channel,name,issuer,html_text">
+			<a href="/apply-banner/capital-one-venture-rewards-credit-card/?tid=RG1" target="_blank" rel="noopener"><img src="https://thepointsguy.com/wp-content/uploads/2018/06/TPG_Right-Gutter-2-June-12-June-305b15d.gif" alt="Citi AA Plat" width="300" height="250" border="0"></a>		</div>
+		
+<section class="favorite-cards favorite-cards-shortcode">
+	<div class="favorite-cards-wrapper">
+
+					<div class="favorite-cards-meta">
+				<div class="title">Our Favorite<br> Partner Cards</div>
+							</div>
+		
+		<div class="cards-wrapper">
+			
+<div class="card" data-product-id="22034405" data-channel="162523" data-name="The Business Platinum® Card from American Express OPEN (22034405)" data-issuer="American Express" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/06/the-business-platinum-card-from-american-express-open-093117.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">
+				The Business Platinum® Card from American Express OPEN			</a>
+		</div>
+
+								
+				<div class="current-offer">
+					Limited Time Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">Up to 100,000 points.<br><strike><small>Up to 75,000 points</small></strike><br></a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/the-enhanced-business-platinum-card-from-american-express-open/?tid=FAV-CARD-WIDGET-1" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="221412045" data-channel="221412045" data-name="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard® (221412045)" data-issuer="Citi" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=500%2C312px&amp;ssl=1 500w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=409%2C255px&amp;ssl=1 409w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=254%2C154px&amp;ssl=1 254w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=150%2C94px&amp;ssl=1 150w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/06/citi-aadvantage-platinum-041618.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">
+				Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard®			</a>
+		</div>
+
+								
+				<div class="current-offer">
+					Limited Time Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">60,000 miles<br><strike><small>50,000 miles</small></strike><br></a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=FAV-CARD-WIDGET-2" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="22125056" data-channel="204650" data-name="Chase Sapphire Preferred® Card (22125056)" data-issuer="Chase" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=500%2C312px&amp;ssl=1 500w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=409%2C255px&amp;ssl=1 409w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=254%2C154px&amp;ssl=1 254w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=150%2C94px&amp;ssl=1 150w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/04/chase-sapphire-preferred-card-040418-2.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">
+				Chase Sapphire Preferred® Card			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">50,000 points</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/chase-sapphire-preferred-card/?tid=FAV-CARD-WIDGET-3" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="22105772" data-channel="ce293c61587c41c29a64c5685cb78e40" data-name="Capital One® Venture® Rewards Credit Card (22105772)" data-issuer="Capital One" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=500%2C312px&amp;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=409%2C255px&amp;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=254%2C154px&amp;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=150%2C94px&amp;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/capital-one-venture-rewards-credit-card-032217-4.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">
+				Capital One® Venture® Rewards Credit Card			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">50,000 miles</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/capital-one-venture-rewards-credit-card/?tid=FAV-CARD-WIDGET-4" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="22504813" data-channel="156 L" data-name="The Platinum Card® from American Express (22504813)" data-issuer="American Express" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=FAV-CARD-WIDGET-5" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=500%2C312px&amp;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=409%2C255px&amp;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=254%2C154px&amp;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=150%2C94px&amp;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/05/the-platinum-card-from-american-express-060117.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=FAV-CARD-WIDGET-5" target="_blank" data-cohesion-setup="true">
+				The Platinum Card® from American Express			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=FAV-CARD-WIDGET-5" target="_blank" data-cohesion-setup="true">60,000 points</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/the-platinum-card-from-american-express/?tid=FAV-CARD-WIDGET-5" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+
+<div class="card" data-product-id="221211974" data-channel="221211974" data-name="Ink Business Preferred℠ Credit Card (221211974)" data-issuer="Chase" data-location="links" data-html_text="Fav Card Widget" data-cohesion-attrs="productId,channel,name,issuer,location,html_text" data-cohesion-setup="true">
+
+	<div class="img-wrapper">
+		<a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=FAV-CARD-WIDGET-6" target="_blank" data-cohesion-setup="true">
+					<div class="attachment-image size-card">
+			<figure>
+				<img width="500" height="315" class="attachment-card size-card lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=500%2C312px&amp;ssl=1 500w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=409%2C255px&amp;ssl=1 409w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=254%2C154px&amp;ssl=1 254w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=150%2C94px&amp;ssl=1 150w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=107%2C67px&amp;ssl=1 107w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/04/ink-business-preferred-credit-card-040518-3.png?resize=107%2C67px&amp;ssl=1">			</figure>
+		</div>
+					</a>
+	</div>
+
+	<div class="meta">
+
+		<div class="title">
+			<a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=FAV-CARD-WIDGET-6" target="_blank" data-cohesion-setup="true">
+				Ink Business Preferred℠ Credit Card			</a>
+		</div>
+
+								 
+
+				<div class="current-offer">
+					Current Offer				</div>
+
+				<div class="offer">
+					<a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=FAV-CARD-WIDGET-6" target="_blank" data-cohesion-setup="true">80,000 points</a>
+				</div>
+
+					
+		<div class="terms">
+			<a href="https://thepointsguy.com/apply/ink-business-preferred%e2%84%a0-credit-card/?tid=FAV-CARD-WIDGET-6" target="_blank" data-cohesion-setup="true">Terms</a>
+		</div>
+
+		
+		
+		
+	</div>
+</div>
+		</div>
+
+			</div>
+</section>
+
+<div class="widget latest-posts ">
+
+	<div class="title">The<br> Latest</div>
+
+			<div class="link">
+			<a href="https://thepointsguy.com/news/paris-wants-its-bistros-recognized-by-unesco/?navtid=Latest-1">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="768" height="432" class="attachment-16x9 size-16x9 lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=144%2C81px&amp;ssl=1" sizes="610px" srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=144%2C81px&amp;ssl=1 144w" src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/07/paris-cafe-bistro-france-eating.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<a href="https://thepointsguy.com/news/paris-wants-its-bistros-recognized-by-unesco/?navtid=Latest-1" title="Paris Wants Its Bistros Recognized by UNESCO">Paris Wants Its Bistros Recognized by UNESCO</a>		</div>
+				<div class="link">
+			<a href="https://thepointsguy.com/guide/best-ways-to-use-iberia-avios/?navtid=Latest-2">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="768" height="432" class="attachment-16x9 size-16x9 lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=144%2C81px&amp;ssl=1" sizes="610px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=144%2C81px&amp;ssl=1 144w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-486828718.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<a href="https://thepointsguy.com/guide/best-ways-to-use-iberia-avios/?navtid=Latest-2" title="The Best Ways to Use 90,000 Iberia Avios">The Best Ways to Use 90,000 Iberia Avios</a>		</div>
+				<div class="link">
+			<a href="https://thepointsguy.com/deals/deal-alert-us-cities-to-iceland-from-179-round-trip/?navtid=Latest-3">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="768" height="432" class="attachment-16x9 size-16x9 lazyautosizes lazyloaded" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=144%2C81px&amp;ssl=1" sizes="610px" srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=144%2C81px&amp;ssl=1 144w" src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-849504836.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<a href="https://thepointsguy.com/deals/deal-alert-us-cities-to-iceland-from-179-round-trip/?navtid=Latest-3" title="Deal Alert: US Cities to Iceland From $179 Round-Trip">Deal Alert: US Cities to Iceland From $179 Round-Trip</a>		</div>
+		
+	<div class="all-newest-posts">
+		<a href="https://thepointsguy.com/all/?navtid=All-Posts">All Newest Posts</a>
+	</div>
+
+</div>
+		<div class="credit-card-widget" data-product-id="22105772" data-channel="ce293c61587c41c29a64c5685cb78e40" data-name="Capital One® Venture® Rewards Credit Card (22105772)" data-issuer="Capital One" data-html_text="RG2" data-cohesion-attrs="productId,channel,name,issuer,html_text">
+			<a href="/apply-banner/capital-one-venture-rewards-credit-card-right-side/?tid=RG2" target="_blank" rel="noopener"><img src="https://thepointsguy.com/wp-content/uploads/2018/06/TPG_Right-Gutter-1-June-12-June-30.gif5b15d.jpg" alt="Capital One Venture" width="300" height="250" border="0"></a>		</div>
+				<div class="credit-card-widget" data-product-id="221412045" data-channel="221412045" data-name="Citi® /  AAdvantage® Platinum Select® World Elite™ Mastercard® (221412045)" data-issuer="Citi" data-html_text="MBT" data-cohesion-attrs="productId,channel,name,issuer,html_text">
+			<a href="/apply-banner/citi-aadvantage-platinum-select-world-elite-mastercard/?tid=RG3" target="_blank" rel="noopener"><img src="http://imgsynergy.com/product_creatives/5effb26ff3a1d936891bbbdf05e1076a.jpg" alt="Citi AAdvantage Platinum" width="300" height="250" border="0"></a>		</div>
+		<section class="sidebar-widget">			<div class="textwidget"><div class="widget">
+<div class="title">Credit Card<br> Guides</div>
+<div class="link"><a href="/guide/top-travel-rewards-credit-cards/?navtid=best-credit-cards">Best <strong>Travel Rewards</strong> Cards</a></div>
+<div class="link"><a href="/guide/top-business-credit-cards/?navtid=best-credit-cards">Best <strong>Business</strong> Cards</a></div>
+<div class="link"><a href="/guide/top-cards-with-no-foreign-transaction-fees/?navtid=best-credit-cards">Best Cards With <strong>No Foreign Transaction Fees</strong></a></div>
+<div class="link"><a href="/guide/top-airline-cards-to-have/?navtid=best-credit-cards">Best <strong>Airline</strong> Cards</a></div>
+<div class="link"><a href="/guide/best-hotel-credit-cards/?navtid=best-credit-cards">Best <strong>Hotel</strong> Cards</a></div>
+</div>
+</div>
+		</section><section class="sidebar-widget">			<div class="textwidget"><div class="article-body-ad">
+<script type="text/javascript" src="https://g.adspeed.net/ad.php?do=js&amp;zid=62741&amp;oid=10126&amp;wd=-1&amp;ht=-1&amp;target=_blank&amp;noerror=1"></script>
+</div></div>
+		</section>		</aside>
+	</div>
+
+
+<section class="related-links">
+
+	<div class="related-header">
+		<span>More from the Points Guy</span>
+	</div>
+
+			<div class="related-link">
+			<a href="https://thepointsguy.com/news/china-hna-co-founder-dead-hilton/?navtid=More-1">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="594" height="422" class="attachment-16x9 size-16x9 lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-154600976-1.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-154600976-1.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-154600976-1.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-154600976-1.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i1.wp.com/thepointsguy.com/wp-content/uploads/2018/07/GettyImages-154600976-1.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<div class="meta">
+									<div class="label"><a href="https://thepointsguy.com/category/news/?navtid=More-1" title="News">News</a></div>
+								<div class="title"><a href="https://thepointsguy.com/news/china-hna-co-founder-dead-hilton/?navtid=More-1" title="The Boss of the Chinese Company That Owns 26% of Hilton Just Fell to His Death">The Boss of the Chinese Company That Owns 26% of Hilton Just Fell to His Death</a></div>
+				<div class="timestamp">2 hours ago</div>
+			</div>
+		</div>
+				<div class="related-link">
+			<a href="https://thepointsguy.com/news/wheres-the-beef-new-zealand-politicians-slam-air-new-zealands-new-burger/?navtid=More-2">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="768" height="432" class="attachment-16x9 size-16x9 lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/07/impossible-burger.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/07/impossible-burger.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/07/impossible-burger.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/07/impossible-burger.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i2.wp.com/thepointsguy.com/wp-content/uploads/2018/07/impossible-burger.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<div class="meta">
+									<div class="label"><a href="https://thepointsguy.com/category/news/?navtid=More-2" title="News">News</a></div>
+								<div class="title"><a href="https://thepointsguy.com/news/wheres-the-beef-new-zealand-politicians-slam-air-new-zealands-new-burger/?navtid=More-2" title="Where’s the Beef? New Zealand Politicians Slam Air New Zealand’s New Burger">Where’s the Beef? New Zealand Politicians Slam Air New Zealand’s New Burger</a></div>
+				<div class="timestamp">3 hours ago</div>
+			</div>
+		</div>
+				<div class="related-link">
+			<a href="https://thepointsguy.com/news/faa-shrinking-airplane-seats/?navtid=More-3">		<div class="attachment-image size-16x9">
+			<figure>
+				<img width="768" height="432" class="attachment-16x9 size-16x9 lazyload" alt="" draggable="false" data-sizes="auto" data-srcset="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/06/deep-vein-thrombosis-plane-economy.jpg?resize=1280%2C720px&amp;ssl=1 1280w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/06/deep-vein-thrombosis-plane-economy.jpg?resize=468%2C264px&amp;ssl=1 468w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/06/deep-vein-thrombosis-plane-economy.jpg?resize=307%2C173px&amp;ssl=1 307w,https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/06/deep-vein-thrombosis-plane-economy.jpg?resize=144%2C81px&amp;ssl=1 144w" data-src="https://i0.wp.com/thepointsguy.com/wp-content/uploads/2018/06/deep-vein-thrombosis-plane-economy.jpg?resize=144%2C81px&amp;ssl=1">			</figure>
+		</div>
+			</a>
+			<div class="meta">
+									<div class="label"><a href="https://thepointsguy.com/category/news/?navtid=More-3" title="News">News</a></div>
+								<div class="title"><a href="https://thepointsguy.com/news/faa-shrinking-airplane-seats/?navtid=More-3" title="FAA to Passengers: Shrinking Airplane Seats Aren’t Our Problem">FAA to Passengers: Shrinking Airplane Seats Aren’t Our Problem</a></div>
+				<div class="timestamp">3 hours ago</div>
+			</div>
+		</div>
+		
+</section>
+</div>
+
+
+<section class="advertiser-disclosure-body">
+	<div class="advertiser-disclosure-heading"><h3>Advertiser Disclosure</h3></div>
+	<span class="icon icon-x-close toggle-close listener-applied-disclosure">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" xml:space="preserve">
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+		<rect x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+	</svg>
+</span>
+	<p>The credit card offers that appear on the website are from credit card companies from which ThePointsGuy.com receives compensation. This compensation may impact how and where products appear on this site (including, for example, the order in which they appear). This site does not include all credit card companies or all available credit card offers. Please view our <a href="/advertising-policy/">advertising policy page</a> for more information.</p>
+<p>Editorial Note: Opinions expressed here are author’s alone, not those of any bank, credit card issuer, airlines or hotel chain, and have not been reviewed, approved or otherwise endorsed by any of these entities.</p>
+</section>
+<footer class="footer-nav">
+	<section class="footer-nav-wrapper">
+		<div class="column-main">
+			<div class="footer-logo">
+				<span class="tpg-logo tpg-logo-secondary">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1158.45 467.85">
+	  <path class="cls-1" d="M263.43,97.84a6.58,6.58,0,0,1,6.58,6.58V447.61a14.28,14.28,0,0,0,14.22,14.23h63.66A13.15,13.15,0,0,0,361,448.73V285.84a6,6,0,0,1,6-6h58.75a135.19,135.19,0,0,0,67.91-18.6.1.1,0,0,1,.15.09c.66,22.4,2.14,44,4.45,63.42,9.07,77.75,64,143.11,153.37,143.11,88.77,0,153.37-64.21,153.37-142V216.23a11.39,11.39,0,0,0-11.39-11.39H667.47A14.51,14.51,0,0,0,653,219.31V278.5a14.38,14.38,0,0,0,14.34,14.34h44a5.68,5.68,0,0,1,5.68,5.68v27.39c0,29.16-26.11,50.54-65,50.54-39.52,0-59.38-23.33-62.62-51.83-6.48-54.43-6.37-127,.11-181.42,3.24-28.51,22.4-51.83,61.92-51.83,40.82,0,62.57,29.8,62.57,56.37v.55a13.61,13.61,0,0,0,13.57,13.55h66.14c7.13,0,11.29-7,11.29-13.46v-.65C805,61.56,741,0,651.63,0c-53.06,0-93.83,23.4-120.45,58.38a.1.1,0,0,1-.14,0l0,0A135,135,0,0,0,425.74,7.84H13.51A13.55,13.55,0,0,0,0,21.35V84.77A13.1,13.1,0,0,0,13.06,97.84H93.42a6.58,6.58,0,0,1,6.58,6.58V447.61a14.28,14.28,0,0,0,14.23,14.23h64.29A12.48,12.48,0,0,0,191,449.36V104.42a6.58,6.58,0,0,1,6.58-6.58Zm162.32,91H367.54A6.54,6.54,0,0,1,361,182.3h0V104.42a6.58,6.58,0,0,1,6.58-6.58h57.07c26.78,0,48.17,21.92,46.34,48.64a45.63,45.63,0,0,1-45.25,42.36Z" transform="translate(0 -0.01)"></path>
+	  <path class="cls-2" d="M996.3,142.95A162.15,162.15,0,1,0,1158.45,305.1,162.15,162.15,0,0,0,996.3,142.95ZM1079.06,354a6.26,6.26,0,0,1-1.83,4.42l-30,30a6.26,6.26,0,0,1-10.68-4.42v-74.4c0-3.89-4.25-5.9-7.48-2.67L943.8,392.19a6.26,6.26,0,0,1-8.85,0l-22.86-22.86a6.26,6.26,0,0,1,0-8.85L997,275.54c3.45-3.45,1.08-7.48-2.67-7.48H920.54a6.26,6.26,0,0,1-4.42-10.69l30.08-30a6.25,6.25,0,0,1,4.42-1.82h122.19a6.26,6.26,0,0,1,6.26,6.26h0V354Z" transform="translate(0 -0.01)"></path>
+	  <path class="cls-1" d="M1079.06,354a6.26,6.26,0,0,1-1.83,4.42l-30,30a6.26,6.26,0,0,1-10.68-4.42v-74.4c0-3.89-4.25-5.9-7.48-2.67L943.8,392.19a6.26,6.26,0,0,1-8.85,0l-22.86-22.86a6.26,6.26,0,0,1,0-8.85L997,275.54c3.45-3.45,1.08-7.48-2.67-7.48H920.54a6.26,6.26,0,0,1-4.42-10.69l30.08-30a6.25,6.25,0,0,1,4.42-1.82h122.19a6.26,6.26,0,0,1,6.26,6.26h0V354Z" transform="translate(0 -0.01)"></path>
+	</svg>
+</span>			</div>
+
+			<div class="column-main-content">
+									<section class="row newsletter">
+						<div class="row__header">The TPG Newsletter</div>
+						<div class="newsletter__wrapper">
+							<div class="copy">
+								<b>BE A SMARTER TRAVELER</b>: Get points strategies, customized alerts + more							</div>
+
+							
+<form action="//thepointsguy.us6.list-manage.com/subscribe/post?u=e1deb758a4e775c4e2c02fd28&amp;id=2b0b8ee2b7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+	<button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
+	<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e1deb758a4e775c4e2c02fd28_2b0b8ee2b7" tabindex="-1" value=""></div>
+</form>
+						</div>
+					</section>
+				
+				<section class="row site_links">
+					<div class="row__header">Site</div>
+					<nav class="site__wrapper link_row">
+						<a href="https://thepointsguy.com/about/">About</a>
+<a href="https://thepointsguy.com/jobs/">Jobs at TPG</a>
+<a href="/about-us/">Team</a>
+<a href="https://thepointsguy.com/contact-us/">Contact Us</a>
+<a href="https://thepointsguy.com/guide/beginners/">Beginner’s Guide</a>
+<a href="https://thepointsguy.com/peace/">Points for Peace</a>
+					</nav>
+				</section>
+				<div class="row site_tools">
+					<div class="site_tools__wrapper">
+						<div class="row__header">Tools</div>
+						<nav class="link_row">
+							<a href="https://thepointsguy.com/download/">TPG To Go</a>
+						</nav>
+					</div>
+				</div>
+
+				
+<section class="footer-disclosure">
+	<p><em>The credit card offers that appear on the website are from credit card companies from which ThePointsGuy.com receives compensation. This compensation may impact how and where products appear on this site (including, for example, the order in which they appear). This site does not include all credit card companies or all available credit card offers. Please view our <a href="/advertising-policy/">advertising policy page</a> for more information.</em></p>
+<p><em>Editorial Note: Opinions expressed here are author’s alone, not those of any bank, credit card issuer, airlines or hotel chain, and have not been reviewed, approved or otherwise endorsed by any of these entities.</em></p>
+</section>
+
+				<div class="row yatta desktop">
+					<span class="copy">© 2018 THE POINTS GUY, LLC. ALL RIGHTS RESERVED</span>
+					<a href="https://thepointsguy.com/privacy-policy/" rel="nofollow">PRIVACY POLICY</a> | <a href="https://thepointsguy.com/terms-of-use/" rel="nofollow">TERMS OF USE</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-social-links">
+			<section class="row">
+				<div class="row__header">TPG Social</div>
+				<nav class="footer_social">
+					@thepointsguy					
+<div class="social-icons">
+			<a href="https://facebook.com/thepointsguy/" data-html_text="Facebook" data-position-id="bottom" data-cohesion-attrs="html_text,positionId" class="facebook-icon" title="Like us on Facebook" data-cohesion-setup="true">
+			<span class="icon icon-facebook">
+	<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+		<path d="M18.86.04H1.14C.534.04.04.534.04 1.14v17.72c0 .607.493 1.1 1.1 1.1h9.54v-7.714H8.084V9.24h2.596V7.023c0-2.573 1.57-3.974 3.866-3.974 1.1 0 2.044.08 2.32.117v2.688h-1.592c-1.248 0-1.49.594-1.49 1.465v1.92h2.977l-.386 3.006h-2.59v7.713h5.076c.607 0 1.1-.494 1.1-1.1V1.14c0-.607-.493-1.1-1.1-1.1" fill-rule="evenodd"></path>
+	</svg>
+</span>			<span class="social_text">Facebook</span>
+		</a>
+	
+			<a href="https://www.instagram.com/thepointsguy/" data-html_text="Instagram" data-position-id="bottom" data-cohesion-attrs="html_text,positionId" class="instagram-icon" title="Follow us on Instagram" data-cohesion-setup="true">
+			<span class="icon icon-instagram">
+	<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+		<path d="M17.5 0h-15C1.12 0 0 1.12 0 2.5v15C0 18.88 1.12 20 2.5 20h15c1.38 0 2.5-1.12 2.5-2.5v-15C20 1.12 18.88 0 17.5 0zM6.148 9.585c.004-.04.012-.078.018-.117.013-.096.027-.193.047-.287l.033-.122c.022-.09.046-.18.074-.266l.044-.12c.032-.085.064-.17.1-.25l.018-.044h.004C7.1 7.048 8.44 6.126 10 6.126c1.56 0 2.9.922 3.514 2.25h.004l.017.042c.037.082.07.166.1.25.016.04.032.08.045.122.03.087.052.176.074.266.01.042.024.082.033.125.02.097.034.194.047.29.006.04.014.078.018.117.015.137.023.275.023.415 0 2.14-1.735 3.876-3.875 3.876-2.14 0-3.875-1.735-3.875-3.875 0-.14.008-.277.023-.414zM17.75 16.75c0 .552-.448 1-1 1H3.25c-.552 0-1-.448-1-1V8.375h1.843c-.142.518-.218 1.063-.218 1.625 0 3.383 2.742 6.125 6.125 6.125s6.125-2.742 6.125-6.125c0-.563-.076-1.107-.218-1.625h1.843v8.375zm0-11.5c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1h2c.552 0 1 .447 1 1v2z" fill="#0F1568" fill-rule="evenodd"></path>
+	</svg>
+</span>			<span class="social_text">Instagram</span>
+		</a>
+	
+			<a href="http://snapchat.com/add/thepointsguy" data-html_text="Snapchat" data-position-id="bottom" data-cohesion-attrs="html_text,positionId" class="snapchat-icon" title="Add us on Snapchat" data-cohesion-setup="true">
+			<span class="icon icon-snapchat circle">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+		<path fill-rule="evenodd" d="M11.97 22.742c-.04.003-.08.005-.12.005-1.39 0-2.285-.643-3.15-1.265-.595-.43-1.158-.834-1.822-.947-.324-.054-.646-.082-.957-.082-.56 0-1 .088-1.32.153-.19.04-.36.072-.49.072s-.28-.03-.34-.25c-.05-.19-.09-.375-.13-.554-.1-.46-.17-.743-.36-.772-2.21-.348-2.84-.82-2.98-1.157-.02-.048-.03-.096-.03-.144-.01-.12.08-.24.21-.26 3.396-.57 4.918-4.1 4.98-4.25.215-.44.255-.81.128-1.12-.233-.56-.993-.8-1.495-.96l-.33-.11c-1.005-.4-1.09-.82-1.05-1.03.063-.36.54-.61.92-.61.103 0 .195.02.273.06.45.22.86.33 1.21.33.487 0 .7-.21.725-.232l-.042-.73c-.1-1.633-.23-3.662.28-4.82C7.58.57 10.808.3 11.76.3l.418-.003c1.01 0 4.245.27 5.768 3.744.508 1.16.382 3.19.28 4.83l-.003.07c-.013.23-.027.45-.038.66.024.03.22.22.66.24.333-.01.717-.12 1.14-.32.123-.06.26-.07.353-.07.143 0 .287.03.407.08.35.13.572.37.577.62.003.24-.176.6-1.057.96-.09.04-.208.08-.33.12-.505.16-1.264.407-1.497.966-.127.307-.087.68.12 1.107.07.165 1.59 3.695 4.987 4.264.125.02.215.134.208.263-.002.05-.013.1-.034.143-.14.33-.77.806-2.98 1.15-.18.03-.25.27-.36.77-.04.18-.08.36-.14.55-.05.167-.15.24-.32.24-.15 0-.31-.02-.52-.06-.38-.076-.8-.145-1.33-.145-.32 0-.64.028-.96.08-.66.115-1.23.52-1.82.948-.87.627-1.76 1.27-3.16 1.27-.06 0-.12 0-.18-.004z"></path>
+	</svg>
+</span>			<span class="social_text">Snapchat</span>
+		</a>
+	
+			<a href="https://twitter.com/thepointsguy/" data-html_text="Twitter" data-position-id="bottom" data-cohesion-attrs="html_text,positionId" class="twitter-icon" title="Follow us on Twitter" data-cohesion-setup="true">
+			<span class="icon icon-twitter">
+	<svg xmlns="http://www.w3.org/2000/svg" width="25" height="21">
+		<path fill-rule="evenodd" d="M7.71 20c-2.84 0-5.484-.833-7.71-2.26.394.046.794.07 1.2.07 2.357 0 4.526-.804 6.247-2.153-2.2-.04-4.06-1.495-4.7-3.494.308.06.624.09.948.09.46 0 .903-.06 1.325-.176C2.72 11.615.985 9.582.985 7.145V7.08c.678.378 1.454.604 2.28.63-1.35-.902-2.24-2.44-2.24-4.187 0-.92.25-1.786.682-2.528C4.187 4.038 7.895 6.04 12.075 6.25c-.085-.368-.13-.752-.13-1.146 0-2.778 2.252-5.03 5.03-5.03 1.448 0 2.755.61 3.673 1.588 1.145-.225 2.222-.644 3.194-1.22-.376 1.174-1.173 2.16-2.212 2.783 1.018-.122 1.987-.392 2.89-.792-.675 1.008-1.528 1.894-2.51 2.604.01.215.014.432.014.65C22.024 12.335 16.964 20 7.71 20"></path>
+	</svg>
+</span>			<span class="social_text">Twitter</span>
+		</a>
+	</div>
+				</nav>
+			</section>
+
+			<div class="yatta mobile">
+				<span class="copy">© 2018 THE POINTS GUY, LLC. ALL RIGHTS RESERVED</span>
+				<a href="https://thepointsguy.com/privacy-policy/" rel="nofollow">PRIVACY POLICY</a> | <a href="https://thepointsguy.com/terms-of-use/" rel="nofollow">TERMS OF USE</a>
+			</div>
+		</div>
+
+			</section>
+</footer>
+
+<!-- START Parse.ly Include: Standard -->
+
+<div id="parsely-root" style="display: none">
+	<div id="parsely-cfg" data-parsely-site="thepointsguy.com"></div>
+<script id="parsely-script" async="" data-cfasync="false" src="https://d1z2jf7jlzjs58.cloudfront.net/p.js"></script></div>
+<script data-cfasync="false">
+	(function (s, p, d) {
+		var h = d.location.protocol, i = p + "-" + s,
+			e = d.getElementById(i), r = d.getElementById(p + "-root"),
+			u = h === "https:" ? "d1z2jf7jlzjs58.cloudfront.net"
+				: "static." + p + ".com";
+		if (e) return;
+		e = d.createElement(s);
+		e.id = i;
+		e.async = true;
+		e.setAttribute('data-cfasync', 'false');
+		e.src = h + "//" + u + "/p.js";
+		r.appendChild(e);
+	})("script", "parsely", document);
+</script>
+
+<!-- END Parse.ly Include: Standard -->
+		<!-- Adobe DTM for footer -->
+		<script type="text/javascript">
+
+			// Output analytics data
+			var dtmAnalyticsData = {"channel":"NEWS","url":"\/2017\/07\/how-to-be-a-great-airbnb-host\/","pageName":"how-to-be-a-great-airbnb-host","author":"Jessie Festa","eVar20":"airbnb, brooklyn, New York, New York City, Rental Lodgings, travel tips, vacation ideas","eVar21":"07022017","eVar22":0,"eVar23":1447,"eVar24":"","eVar25":""};
+
+			// Build an array of query vars
+			var queryVars = [],
+				sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if ( undefined !== sParameterName[1] ) {
+					queryVars[sParameterName[0]] = sParameterName[1];
+				}
+			}
+
+			// Buick campaign vars
+			var campaign = [];
+
+			// Collect UTM vars
+			if (undefined !== queryVars['utm_source']) {
+				campaign.push(queryVars['utm_source']);
+			}
+
+			if (undefined !== queryVars['utm_campaign']) {
+				campaign.push(queryVars['utm_campaign']);
+			}
+
+			// Build UTM vars
+			campaign = campaign.join('|');
+
+			if ( campaign === '' ) {
+				if ('' === document.referrer) {
+					campaign = 'direct traffic||||';
+				} else if (document.referrer.indexOf('google.com') >= 0 ) {
+					campaign = 'google|seo|||';
+				}else if ( document.referrer.indexOf('facebook.com') >= 0 ) {
+					campaign = 'facebook||||';
+				} else if ( document.referrer.indexOf('twitter.com') >= 0 || document.referrer.indexOf('t.co') >= 0 ) {
+					campaign = 'twitter||||';
+				}
+			}
+
+			// Append campaign value to analytics data
+			dtmAnalyticsData.campaign = campaign;
+
+			// TID used for offer clicks
+			if (undefined !== queryVars['tid']) {
+				dtmAnalyticsData.tid = queryVars['tid'];
+			}
+
+			// Some TIDs don't persist all the way through to offer clicks
+			// They are replaced by the offer link TIDs themselves
+			// So we are tracking them separately as Navigation TIDs
+			if (undefined !== queryVars['navtid']) {
+				dtmAnalyticsData.navtid = queryVars['navtid'];
+			}
+
+			// Context location
+			if (undefined !== queryVars['context']) {
+				dtmAnalyticsData.eVar7 = queryVars['context'];
+			}
+
+			// Previous page values saved by TrackingCookie, see client/js/classes/TrackingCookie.js
+			dtmAnalyticsData.prevpage = document.cookie.replace(/(?:(?:^|.*; )prevpage=([^;]*).*$)|^.*$/, '$1');
+			dtmAnalyticsData.prevPageName = document.cookie.replace(/(?:(?:^|.*; )prevPageName=([^;]*).*$)|^.*$/, '$1');
+			dtmAnalyticsData.prevChannel = document.cookie.replace(/(?:(?:^|.*; )prevChannel=([^;]*).*$)|^.*$/, '$1');
+
+			// Store OID as purchaseId
+			if (window.oid) {
+				dtmAnalyticsData.purchaseId = window.oid;
+			}
+
+			if (window.optimizely && typeof window.optimizely.get === 'function' && window.optimizely.get('custom/adobeIntegrator')) {
+				// window.optimizely.get('custom/adobeIntegrator').assignCampaigns(dtmAnalyticsData);
+			}
+
+			
+			_satellite.pageBottom();
+		</script>
+		
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/thepointsguy.com\/2017\/07\/how-to-be-a-great-airbnb-host\/":347113};
+	</script>
+<script>
+	var disqus_config = function () {
+		this.page.url = window.tpgGlobalVars.permalink;
+	};
+	(function() {  // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+
+		s.src = '//thepointsguy.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16558039-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/themes/tpg-2016/static/js/global.450f758.bundle.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/themes/tpg-2016/static/js/search.450f758.bundle.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/themes/tpg-2016/static/js/card-selector.450f758.bundle.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://s.skimresources.com/js/108360X1565867.skimlinks.js?ver=1.0"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/plugins/photonfill/vendor/picturefill.min.js?ver=2.3.1"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/plugins/photonfill/vendor/lazysizes.min.js?ver=1.2.3rc1"></script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-includes/js/wp-embed.min.js?ver=4.9.6"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thepointsguy.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.4.2"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"38cce5be73","applicationID":"39153354","transactionName":"Y1JVYEdVCERZUBEKX1oYdldBXQlZF0QXAkBEUkU=","queueTime":0,"applicationTime":533,"atts":"TxVWFg9PG0o=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<iframe style="display: none;"></iframe></body></html>
